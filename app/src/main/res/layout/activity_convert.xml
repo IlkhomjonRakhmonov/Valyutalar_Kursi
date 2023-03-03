@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#F4D679"
+    tools:context=".MainActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#73D0FA"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="Kurslar konvertatsiyasi"
+            />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        >
+        <TextView
+            android:id="@+id/vaqt"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:textColor="#8A04A1"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:textStyle="bold"
+            android:text="15:15"
+            />
+
+        <TextView
+            android:id="@+id/sana"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:textColor="#8A04A1"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:textStyle="bold"
+            android:shadowRadius="10"
+            android:layout_marginRight="3dp"
+            android:text="25.02.2023 yil"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="60dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/teal_700"
+                android:text="@string/qaysi_valyutadan"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="0dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/teal_700"
+                android:text="@string/qaysi_valyutagaa"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="60dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp"
+            >
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp"
+            >
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="4dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#78AEAD"
+                android:text="Miqdorni kiriting"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="4dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="11990"
+                android:background="#90C9F6"
+                 android:inputType="number"
+                android:textSize="25sp"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/white"
+            android:text="convertation"
+            android:textColor="#9C27B0"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            >
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="4dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#6AE8DC"
+                    android:text="@string/qaysi_valyutadan"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/baseline_transform_24"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                    app:cardElevation="8dp"
+                app:cardCornerRadius="4dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#6AE8DC"
+                    android:text="@string/qaysi_valyutagaa"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

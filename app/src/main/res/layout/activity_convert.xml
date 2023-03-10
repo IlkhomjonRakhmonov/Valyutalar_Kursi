@@ -32,13 +32,13 @@
         >
         <TextView
             android:id="@+id/vaqt"
-            android:layout_width="110dp"
+            android:layout_width="180dp"
             android:layout_height="30dp"
             android:textColor="#8A04A1"
             android:textSize="15sp"
-            android:gravity="right"
+            android:gravity="left"
             android:textStyle="bold"
-            android:text="15:15"
+            android:text="So'nggi yangilangan sana:"
             />
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_height="30dp"
             android:textColor="#8A04A1"
             android:textSize="15sp"
-            android:gravity="right"
+            android:gravity="center"
             android:textStyle="bold"
             android:shadowRadius="10"
             android:layout_marginRight="3dp"
@@ -105,30 +105,31 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="0dp"
         android:gravity="center"
         >
         <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
+            android:layout_width="175dp"
             android:layout_height="50dp"
-            android:layout_marginRight="60dp"
+            android:layout_marginRight="20dp"
             app:cardElevation="8dp"
             app:cardCornerRadius="4dp"
             >
             <Spinner
+                android:id="@+id/spinner_from"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
                 />
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
+            android:layout_width="175dp"
             android:layout_height="50dp"
             app:cardElevation="8dp"
             app:cardCornerRadius="4dp"
             >
             <Spinner
+                android:id="@+id/spinner_to"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -171,6 +172,7 @@
             app:cardCornerRadius="4dp"
             >
             <EditText
+                android:id="@+id/EDT_miqdor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -183,6 +185,7 @@
 
         </androidx.cardview.widget.CardView>
         <Button
+            android:id="@+id/convertation"
             android:layout_width="190dp"
             android:layout_height="60dp"
             android:backgroundTint="@color/white"
@@ -200,12 +203,13 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_height="65dp"
                 android:layout_marginRight="10dp"
                 app:cardElevation="8dp"
                 app:cardCornerRadius="4dp"
                 >
                 <TextView
+                    android:id="@+id/from_TV"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -218,24 +222,26 @@
 
             </androidx.cardview.widget.CardView>
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:id="@+id/conversely"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_marginRight="10dp"
                 android:src="@drawable/baseline_transform_24"
                 />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_height="65dp"
                     app:cardElevation="8dp"
                 app:cardCornerRadius="4dp"
                 >
                 <TextView
+                    android:id="@+id/to_TV"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:background="#6AE8DC"
-                    android:text="@string/qaysi_valyutagaa"
+                    android:text="qaysi valyutaga"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     />

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import io.reactivex.Observable
@@ -16,6 +17,7 @@ import io.reactivex.schedulers.Schedulers
 import uz.rakhmonov.valyutalarkursi.adapter.RV_adapter
 import uz.rakhmonov.valyutalarkursi.databinding.ActivityMainBinding
 import uz.rakhmonov.valyutalarkursi.models.MyCurrency
+import uz.rakhmonov.valyutalarkursi.utils.myFlags.qiymatList
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -26,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.mySwipe.setOnRefreshListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+
+
+
 if (hasConnection(this)){
     getCurrency()
         .subscribeOn(Schedulers.io())
@@ -33,10 +41,12 @@ if (hasConnection(this)){
         .subscribe {
             rvAdapter=RV_adapter(it)
             binding.RV.adapter=rvAdapter
+            binding.mySwipe.isRefreshing=false
         }
 
 }else{
     binding.noconnection.visibility=View.VISIBLE
+    binding.mySwipe.isRefreshing=false
 
     Toast.makeText(this, "Iltimos mobil internet sozligini tekshiring", Toast.LENGTH_SHORT).show()
 }
@@ -70,6 +80,7 @@ if (hasConnection(this)){
 
             val type = object : TypeToken<ArrayList<MyCurrency>>() {}.type
             list.addAll(gson.fromJson<ArrayList<MyCurrency>>(gsonString, type))
+            qiymatList=list
             it.onNext(list)
         }
 
